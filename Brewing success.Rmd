@@ -1,0 +1,858 @@
+---
+title: "Brewing Success: Enhancing Independent Coffee Shop Visibility Through Online Reviews"
+author:  "Claire Li, Muskan Shokeen, ShaoChien Wang, Zhiyuan Yu, Zhiyi Guo"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment="", warning = FALSE, message = FALSE, tidy.opts=list(width.cutoff=55), tidy = TRUE)
+
+```
+
+## Part 1:  Research Proposal
+
+### Executive Summary / Abstract
+
+**Claire Li 90%, ShaoChien Wang 10%**: 
+
+**Problem statement**
+
+<p style="text-align: justify;">
+Coffee is one of the most beloved beverages worldwide, and the modern coffee shop industry is both diverse and competitive. This is especially true in the U.S., where the coffee shop business valued at over US$36 billion in 2021, is marked by intense competition and evolving consumer preferences. For independent coffee shops, the challenge of surviving and distinguishing themselves in such a dynamic environment has become a significant aspect of business operations. Beyond traditional offline promotions and campaigns, a promising strategy for brand marketing and attracting potential customers lies in effectively leveraging the burgeoning influence of online review platforms. This involves interaction with customers by responding to online reviews. While numerous studies have confirmed the positive impact of managerial responses to customer reviews, most have focused primarily on handling negative online reviews, overlooking the potential of leveraging positive reviews. Our research aims to bridge this gap by studying the effects of managerial responses to positive online customer reviews on customers' intention to visit the coffee shop.
+</p>
+
+**Study objectives**
+
+<p style="text-align: justify;">
+The objective of this research is to provide actionable insights for independent coffee shop businesses navigating the competitive digital landscape of the coffee shop industry and to enrich the broader understanding of digital marketing tactics in an increasingly digital-centric consumer environment. This study aims to explore the underutilized potential of positive online customer reviews in the coffee shop industry. Specifically, the study seeks to:
+</p>
+
++ Analyze whether a coffee shop owner’s response to positive online customer reviews can affect customers' intention to visit the coffee shop.
+
++ Investigate the influence of different response styles on customers' intentions to visit coffee shops, specifically comparing Formal versus Casual responses.
+
+**Research design**
+
+<p style="text-align: justify;">
+This study plans to conduct an experiment using an online survey. During the experiment, participants will be shown hypothetical positive online reviews and designed owner responses, and questions about whether they intend to visit the coffee shop per viewing the contents will be asked. Participants will be randomly distributed into three groups: one viewing a Formal response, one viewing a Casual response, and a control group that sees only the positive reviews without any response from the business owner. Participants' responses to the survey will be collected, and the proportion of participants who intend to visit the coffee shop will be analyzed and compared. A statistical analysis method, specifically a two-sample one-sided test of proportion, will be used to determine if there are statistically significant differences in the responses from the three groups.
+</p>
+
+**Keywords**
+
+<p style="text-align: justify;">
+Coffee shop; online review; managerial response to online customer review; customer visit intention.
+</p>
+
+### Statement of the Problem
+
+**Zhiyi Guo 90%, Claire Li 10%**: 
+
+<p style="text-align: justify;">
+The coffee shop industry, valued at over US$ 36 billion in the U.S. in 2021 and projected to reach US$ 243 billion globally by 2032 (<span style="color: #3074D9;">NASDAQ, 2022</span>), is witnessing unprecedented growth. However, this optimistic forecast also hints at emerging challenges and strategic necessities for coffee shop businesses, especially in a market where the competitive landscape is rapidly evolving. The industry is not only a battleground for local and major coffee chains but also contends with independent businesses and a rising trend in high-quality home brewing options. This diversity intensifies consumer choices and dynamizes the competitive environment for businesses.
+</p>
+
+<p style="text-align: justify;">
+In such a competitive market, coffee shop owners must adopt innovative strategies to stand out and retain customers. While traditional offline strategies like loyalty programs and cross-promotions are prevalent, their long-term sustainability is questionable due to their resource-intensive nature and potential impact on profit margins.
+</p>
+
+<p style="text-align: justify;">
+Nowadays, a pivotal factor that has reshaped consumer behavior in the service industry is the influence of online review platforms such as Yelp and TripAdvisor. These platforms have become central to digital word-of-mouth (WOM), significantly impacting consumer choices, particularly for new, independent coffee shops that lack widespread brand recognition (<span style="color: #3074D9;">Lu et al., 2013; Gretzel et al., 2011</span>). Although from the perspective of coffee shop owners, the ability to actively manipulate online reviews is limited, one actionable and effective use of online review platforms lies in responding to reviews. This interaction not only demonstrates the owners' attention to customer feedback but can also shape potential customers’ perceptions.
+</p>
+
+<p style="text-align: justify;">
+Existing research highlights the significant impact of managerial responses to online reviews on customer satisfaction, trust, and even revenue (<span style="color: #3074D9;">Lui et al., 2018; Min et al., 2015; Dens et al, 2015; Sparks et al., 2016</span>). However, the emphasis has been primarily on handling negative reviews. There is a notable gap in understanding how business owners can effectively leverage positive reviews and the effect of their response styles on customer perceptions and visit intentions. Our research aims to bridge this gap.
+</p>
+
+<p style="text-align: justify;">
+This research seeks to explore how coffee shop owners can utilize response management strategies to maximize the benefits of positive online customer reviews in a digitally-centric market. It aims to understand whether and how managerial responses to positive reviews influence customer perceptions and their intention to visit, particularly examining the differences between Formal and Casual response styles. This research aspires to provide actionable insights for independent businesses navigating the competitive digital landscape of the coffee shop industry. Furthermore, the study's findings are expected to enrich the broader understanding of digital marketing tactics in an increasingly digital-centric consumer environment.
+</p>
+
+
+### Literature Review
+
+**Clarie Li 90%, Zhiyi Guo 10%**: 
+
+<p style="text-align: justify;">
+Leveraging online review platforms offers a significant advantage in brand marketing, as it allows business owners to gather real-time insights and engage directly with customers. Existing research has extensively explored customer relationship management strategies on these platforms, focusing on how electronic WOM can build brand trust and enhance customer visit intentions. Numerous studies have investigated business operators’ responses to online reviews. For instance, (<span style="color: #3074D9;">Lui et al., 2018</span>) found that the number of managerial responses to reviews positively impacts business revenue significantly (Coef. β 152.2, p < 0.000), with well-defined response strategies having a more favorable impact. Research in the hotel sector by (<span style="color: #3074D9;">Min et al., 2015</span>) revealed that empathetic and timely responses from managers can significantly enhance customer satisfaction and brand perception, suggesting potential parallels in the coffee shop industry.
+</p>
+
+<p style="text-align: justify;">
+An increasing body of literature has examined strategies for responding to negative online reviews and their effects on cultivating favorable perceptions and action tendencies. (<span style="color: #3074D9;">Dens et al, 2015</span>) discovered that simple acknowledgments of negative reviews improve customer attitudes by 6%, while strategic and well-organized responses can lead to an 18% improvement. (<span style="color: #3074D9;">Sparks et al., 2016</span>) showed that fast, conversational responses enhance customers’ trust by 21%. Despite these insights, there's a noticeable gap in understanding how business owners interact with positive reviews and its impacts.
+</p>
+
+<p style="text-align: justify;">
+Positive online reviews are instrumental in building potential customers’ trust and increasing their visit intentions (<span style="color: #3074D9;">Sparks et al., 2011</span>). However, the existing literature has largely overlooked how business owners can utilize response management strategies to maximize the benefits of positive reviews. Only in the online retail sector, a study found that responses to positive reviews significantly affect customers' impressions and satisfaction (<span style="color: #3074D9;">Wu et al., 2020</span>), indicating a potential area for exploration in coffee shops. This research aims to bridge existing research gaps.
+</p>
+
+<p style="text-align: justify;">
+Consumer perceptions of service quality and behavioral intentions are significantly influenced by the management communication style, which refers to how the message has been delivered and understood (<span style="color: #3074D9;">Norton, 1983; Dion et al., 1992</span>). Research has identified two primary communication styles: Formal and Casual. Formal style is characterized by authoritative, professional, and emotionless expressions, while the Casual style is more akin to a human voice, being friendly and accommodating (<span style="color: #3074D9;">Webster et al., 2009</span>). Study has underscored the significant role of response style in relationship management (<span style="color: #3074D9;">Lambert et al., 2013</span>). A friendly style in responses can foster intimacy and enhance positive emotions among individuals. Therefore, it is plausible to assume that varying response styles from business owners to online customer reviews could create varying impressions, consequently influencing customers' intentions to visit. This study aims to explore whether coffee shop owners' responses in Formal and Casual styles influence customers' intention to visit the coffee shop.
+</p>
+
+
+
+### Research Questions, Hypotheses, and Effects
+**Muskan Shokeen 90%, Claire 10% **: 
+
+<p style="text-align: justify;">
+This research intends to use a survey to study the effect of a coffee shop owner's response to online reviews on participants' intention to visit. Participants will be randomly distributed into groups, with each group exposed to different content aligned with the research questions and independent variables as follows:
+</p>
+
+#### Research question 1: 
+
+<p style="text-align: justify;">
+**Relative to no response of coffee owners on positive comments, does a response to positive comments increase the proportion of people intending to visit independent coffee shops?**
+</p>
+
++ **Independent Variable**: Response to Positive Comments (with two levels: Response and No Response)
+
++ **Dependent Variable**: People’s Intention to Visit the Coffee Shop (binary outcome: Yes or No)
+
++ **Metric of Performance**: Proportion of Who Intend to Visit the Coffee Shop
+
+<p style="text-align: justify;">
+**Null Hypothesis (H0):** There is no significant difference in the proportion of people intending to visit the coffee shop between those who see a response to positive comments and those who do not see a response.
+</p>
+
+<p style="text-align: justify;">
+**Alternative Hypothesis (H1):** The proportion of people intending to visit the coffee shop among those who see a response is significantly higher than the proportion of those who do not see a response.
+</p>
+
+<p style="text-align: justify;">
+**Effect Size:** To achieve a meaningful impact, it is expected the proportion of people intending to visit the coffee shop among those who see a response is at least 7% higher than the proportion of those who do not see a response.
+</p>
+
+#### Research question 2: 
+
+<p style="text-align: justify;">
+**Relative to a “Formal” tone in an owner’s response to positive comments, does a response in “Casual” tone increase the proportion of people intending to visit independent coffee shops**
+</p>
+
++ **Independent Variable**: Response Tone (with two levels: Formal and Casual)
+
++ **Dependent Variable**: People’s Intention to Visit the Coffee Shop (binary outcome: Yes or No)
+
++ **Metric of Performance**: Proportion of Who Intend to Visit the Coffee Shop
+
+<p style="text-align: justify;">
+**Null Hypothesis (H0):** There is no significant difference in the proportion of people intending to visit the coffee shop between those who see a response to positive comments in Formal tone and those who see a response in Casual tone.
+</p>
+
+<p style="text-align: justify;">
+**Alternative Hypothesis (H1):** The proportion of people intending to visit the coffee shop among those who see a response in Casual tone is significantly higher than the proportion of those who see a response in Formal tone.
+</p>
+
+<p style="text-align: justify;">
+**Effect Size:** To achieve a meaningful impact, it is expected that the proportion of people intending to visit the coffee shop among those who see a response in Casual tone is at least 7% higher than the proportion of those who see a response in Formal tone.
+</p>
+
+<p style="text-align: justify;">
+Choosing 7% effect size for both research questions accounts for the uncertainty in measuring intentions instead of store visits, providing flexibility and a more resilient margin for error in the research.
+</p>
+
+
+### Importance of the Study and Social Impact
+
+**Zhiyi Guo 90%, Claire Li 10%**: 
+
+<p style="text-align: justify;">
+This study is crucial for both the academic area and the practical arena of company management, notably in the coffee shop industry. This study fills a significant gap in the literature by investigating the influence of response management tactics on online reviews, particularly good ones. While previous research has mostly focused on dealing with bad reviews, this study takes a novel approach by investigating positive review management and the consequences of alternative response approaches.
+</p>
+
+<p style="text-align: justify;">
+The findings of this study will be useful to coffee shop owners in understanding how their interactions with consumers on digital platforms might impact consumer behavior and company consequences. This is particularly crucial in a market projected to grow exponentially, where strategic differentiation is key to capturing and retaining customer interest. This study will assist coffee shop owners make educated decisions about their digital marketing methods by giving empirical information on the success of various response strategies, eventually contributing to higher customer happiness, enhanced brand perception, and increased revenue.
+</p>
+
+<p style="text-align: justify;">
+Furthermore, this research contributes to a larger scholarly understanding of digital WOM in the context of an ever-changing online ecosystem. It makes a unique contribution by bridging the gap between communication styles and customer reaction, adding to the corpus of knowledge in digital marketing and consumer behavior research.
+</p>
+
+### Research Plan
+
+**ShaoChien Wang 40%, Zhiyuan Yu 60%**: 
+
+
+#### Population of Interest
+
+**ShaoChien Wang 50%, Zhiyuan Yu 50%**: 
+
+<p style="text-align: justify;">
+The population of interest in the research would be all the coffee customers for the independent coffee shop that we would cooperate with. The goal of the research is to help coffee shop owners increase customer’s intention to visit based on the research results. This experiment can be repeated multiple times across many different coffee shops to refine their marketing strategy.
+</p>
+
+#### Sample Selection
+
+**ShaoChien Wang 50%, Zhiyuan Yu 50%**: 
+
+<p style="text-align: justify;">
+Random sampling is considered to be utilized in the study to enhance the reliability, accuracy, and validity of the study’s findings. This study randomly selects 2,520 people who actively engaged in the online platform last year and had a higher tendency to check online reviews before the visit. Participants are selected randomly from one particular online review platform regardless of their demographic characteristics to stratify the sample selection.
+</p>
+
+#### Operational Procedures
+
+**ShaoChien Wang 50%, Zhiyuan Yu 50%**: 
+
+<p style="text-align: justify;">
+The experiment is in a hypothetical setting in which shop owners can take actions to influence the customers’ intentions by replying to reviews. This study assumes customers’ intention can directly enhance the shop’s popularity and customer flow and customers are rational people who are following the customer psychology.
+</p>
+
+<p style="text-align: justify;">
+a. Collect reviews from a particular coffee shop in the last year, select all the positive reviews, and expose them to the shop’s owner. The positive reviews require a minimum of 4 or 5 stars of rating and diction of positive words and phrases. The owner intentionally replies to all the positive reviews in two different tones (formal vs casual).</p>
+
+
+<p style="text-align: justify;">
+b. To address the first question, 1,260 participants would read 5 reviews without any responses from the owner.  The remaining 1,260 participants would read 5 positive reviews with responses from the owner. Here we can regard the no-response group as a control group while the with-response group as a treatment group.
+</p>
+
+<p style="text-align: justify;">
+c. To address the second research question, the coffee shop owner intentionally creates two layers of groups among the 1,260 participants who read the with-response reviews. For the first group, 630 participants are exposed to 5 positive reviews with Casual responses from the shop's owner and the second group of 630 participants see 5 reviews with Formal responses.
+</p>
+
+<p style="text-align: justify;">
+d. Present participants with the review based on their assigned group. After the exposure, an online survey is given to 2,520 participants. Multiple questions are being asked about their intention for this coffee shop. 
+</p>
+
+<p style="text-align: justify;">
+e. After collection, review the subset of data to ensure the data is consistent to remove the outliers. Collect the results and analyze them to draw a solid conclusion based on the research questions.
+</p>
+
+A copy of the survey is included in the appendix for reference.
+
+#### Brief Schedule
+
+**ShaoChien Wang 100%**: 
+
+<p style="text-align: justify;">
+The expected length of the whole research is 3 months. 2,520 surveys would be distributed to the interested population in the first month. In the second month, the collected data would be reviewed, ensuring that the correctly answered completed surveys meet the sample size requirements which is 2,520. If the useful survey is less than 2,520, more surveys will be distributed. The analysis process starts when the verified survey is enough. 
+</p>
+
+#### Data Collection
+
+**ShaoChien Wang 50%, Zhiyuan Yu 50%**: 
+
+<p style="text-align: justify;">
+To collect the independent variables and avoid bias, ensuring no direct contact between the participants and researchers is needed. Some strategies were applied like logical flow, simple language, and a few attention-check questions to enhance the effectiveness and reliability. The main question is “Based on the review, how likely are you to visit the coffee shop” which can be stored as a binary result. 0 stands for “No" while 1 represents “Yes. 
+</p>
+
+#### Data Security
+
+**Zhiyuan Yu 100%**: 
+
+<p style="text-align: justify;">
+Maintaining data security requires a combination of procedural and ethical attempts. We asked the participants for informed consent and explained to them how the experiment is structured and how their data will be in use and processed. Since data is collected via online-survey format, the online website should be encrypted, restricting non-personal access. During data processing, we ensure the process is in a secure and controlled environment, all the software and tools we use are updated and trusted. All the participants have the rights to leave the experiment if they need to. Keep detailed records of data handling procedures and consent forms. All the data collection and process will be transparent when reporting the results. 
+</p>
+
+#### Variables
+
+
+##### Outcomes (Dependent Variables)
+
+**ShaoChien Wang 30%, Zhiyuan Yu 40%, Muskan Shokeen 30% **: 
+
+The binary outcome (yes or no) of respondents’ intention to visit the coffee shop 
+
+
+##### Treatments (Independent Variables)
+
+**ShaoChien Wang 30%, Zhiyuan Yu 40%, Muskan Shokeen 30% **: 
+
+Research question 1: positive reviews with owner’s response vs. positive reviews without owner’s response
+
+Research question 2:  Formal response vs. Casual response on positive comments 
+
+##### Other Variables
+
+**ShaoChien Wang 50%, Zhiyuan Yu 50%**: 
+
+Demographics of participants, and participants’ subjective behaviors and preference
+
+
+### Statistical Analysis Plan  
+
+**Zhiyuan Yu 100%**: 
+
+<p style="text-align: justify;">
+To conduct a statistical analysis plan, calculate the mean, median, mode, and standard deviation and generate frequency distribution based on participants' demographics. Clean the data to remove the outliers and bad quality of participants’ answers. The primary outcome is stored as a binary variable. Since we want to know the proportion difference between certain groups. Two-sample one-sided test of proportion is being used to determine the statistical significant difference between two independent groups. To conduct this method, we ensure that samples are randomly selected and independent of each other. The choice of sample size (1260) is large enough to complete the requirement of normal distribution and reduce the margin of error. To address the Research question 1, we compare the proportion differences between positive reviews with the owner’s response and without the owner’s response group. To address the research question 2, we compare the proportion difference between Formal response group and casual response group under the with-response groups in the question 1.the participants are selected randomly all the observations are independent of each other.
+</p>
+
+<p style="text-align: justify;">
+After all assumption checks are complete, a two-sample one-sided proportion test can be addressed to this experiment. By using statistical software like Rstudio, coefficients and p-values can be used to determine the direction and strength of the relationship with the outcomes. A small p-value ( < 0.05) suggests rejecting the null hypothesis in favor of the alternative hypothesis. Analyzing the significance of the variables is to indicate the probability of difference between groups. Based on the results, a feasible conclusion can be drawn to interpret the experiment. 
+</p>
+
+<p style="text-align: justify;">
+In order to understand the variability and the distribution of the results, 1000 times data simulation can help to assess whether the outcomes are consistent and robust. Simulation also allows us to check how well our model performs under different scenarios. We can also analyze an appropriate power by running multiple simulations to estimate the probability of rejecting a null hypothesis when null is correct.
+</p>
+
+
+
+### Sample Size and Statistical Power
+
+**ShaoChien Wang 50%, Zhiyuan Yu 50%**: 
+
+<p style="text-align: justify;">
+In this study, a total sample size of 2,520 participants is utilized, as it provides an adequate and considerable basis for conducting statistical tests. The distribution includes 1,260 participants in the control group, with 630 participants each in the Formal and Casual response groups. This sample size was calculated to achieve 80% statistical power based on the chosen effect size. It is tested in the simulation, the statistical power of research question 1 (no response vs. owner’s response) is 95.9% while the statistical power of research question (Formal response vs. Casual response) is 79.5%. To mitigate the risk of biased or fraudulent responses, the inclusion of more than 2,520 potential participants is advisable.
+</p>
+
+### Possible Recommendations
+
+**ShaoChien Wang 100%**: 
+
+**Research Question 1**
+
+**A. If the Null Hypothesis is not rejected:**
+
+<p style="text-align: justify;">
+If the null hypothesis is not rejected, it suggests that the owner's responses to positive comments may not have a statistically significant impact on increasing people's intention to visit independent coffee shops. 
+</p>
+
+<p style="text-align: justify;">
+In this case, coffee shop owners may consider focusing on other aspects of customer engagement or marketing strategies to enhance the intention to visit. They might explore other ways to enhance the customer experience, such as improving service/product overall quality, offering promotions, or creating loyalty programs.
+</p>
+
+**B. If the Null Hypothesis is rejected:**
+
+<p style="text-align: justify;">
+If the null hypothesis is rejected, the owner's response to positive comments increases people's intention to visit independent coffee shops is suggested. 
+</p>
+
+<p style="text-align: justify;">
+Coffee shop owners should prioritize actively engaging with the review platform and provide positive feedback. They may consider establishing a positive online presence by appreciatively responding to customer reviews, which might result in a more favorable perception of the coffee shop and attract potential customers.
+</p>
+
+**Research Question 2**
+
+**A. If the Null Hypothesis is not rejected:**
+
+<p style="text-align: justify;">
+If the null hypothesis is not rejected, indicating no significant difference between a "Formal" and "Casual" tone in responses to positive comments.
+</p>
+
+<p style="text-align: justify;">
+Coffee shop owners may have flexibility in choosing the tone of their responses and they can choose a tone that aligns with the overall brand identity and values to enhance their image for the customers. </p>
+
+<p style="text-align: justify;">
+Depending on the target audience, the formal tone might shape a professional image while the casual tone might create a laid-back atmosphere.
+</p>
+
+**B. If the Null Hypothesis is rejected:**
+
+<p style="text-align: justify;">
+If the null hypothesis is rejected, it is suggested that the tone of responses to positive comments influences people's intention to visit. Coffee shop owners should carefully consider the tone they use online. 
+</p>
+
+<p style="text-align: justify;">
+Depending on the target audience, the owner should take into account the atmosphere they want to create in their coffee shop when choosing the response tone. Adopting a more casual tone might enhance a more friendly and warm presence.
+</p>
+
+### Limitations and Uncertainties
+
+**Muskan Shokeen 100%**: 
+
+<p style="text-align: justify;">
+While our research delves into participants' intentions to visit a coffee shop based on owner responses and response tones, it's essential to recognize that intention does not always translate into an actual visit. Measuring the direct influence of owner responses and response tone on revenue and foot traffic poses challenges, as it's intricate to ascertain which reviews customers read before visiting. Moreover, the demographic composition on the review platform might not represent the broader coffee consumer population, limiting the generalizability of our findings. Owners' distinctive responses to positive reviews introduce variability that may not be fully captured within our study's scope. The dynamic nature of online platforms adds another layer of complexity, with perpetual evolution potentially impacting the relevance and effectiveness of response management strategies over time. Customer perceptions, influenced by various factors like in-store experiences and word-of-mouth, contribute to the intricate landscape that extends beyond online reviews. Despite these considerations, existing studies highlight the positive impact of reviews on business revenue, emphasizing the value for coffee shop owners to actively manage their online image for enhanced customer impressions and satisfaction. Moreover, understanding and measuring customer intentions can provide valuable insights for independent coffee owners, aiding them in refining their marketing strategies and fostering a positive online presence.
+</p>
+
+
+## Part 2:  Simulated Studies
+
+**Zhiyi Guo 20%,	Zhiyuan Yu 20%,	Muskan Shokeen 20%, 	ShaoChien Wang 20%,	Claire Li 20%**: 
+
+
+```{r }
+# If your research questions are part of a single experiment, then simulate your data here.
+
+library(dplyr)
+
+##### calculate required sample size ####
+
+# Parameters for power analysis
+alpha <- 0.05 # Significance level
+power <- 0.80 # Desired power
+
+# Proportions for control and treatment groups
+p1 <- 0.50 # Control group proportion
+p2 <- 0.535 # Treatment - Formal group proportion
+p3 <- 0.605 # Treatment - Casual group proportion
+effect_size <- 0.07
+
+# Research Question 1: Control vs. Combined Treatment effect of 7%
+p_combined <- p1 + effect_size # Combined treatment group target proportion
+
+# Sample size calculation for Research Question 1
+sample_size_1 <- power.prop.test(p1 = p1, p2 = p_combined, sig.level = alpha, power = power, alternative = "one.sided")
+
+# Research Question 2: Formal vs. Casual effect of 7%
+p_casual_target <- p2 + effect_size # Casual treatment group target proportion
+
+# Sample size calculation for Research Question 2
+sample_size_2 <- power.prop.test(p1 = p2, p2 = p_casual_target, sig.level = alpha, power = power, alternative = "one.sided")
+
+# Output the results
+list(Sample_Size_RQ1 = sample_size_1, Sample_Size_RQ2 = sample_size_2)
+
+# Set sample size according to test results
+control_n <- 1260
+treatment_formal_n <- 630
+treatment_casual_n <- 630
+
+#### Scenario 1 No Effect ####
+
+prob_control <- 0.50  # Probability of success for control group
+
+# Initialize an empty data frame to store all simulations
+simulation_S1 <- data.frame()
+
+# Set the number of simulations
+num_simulations <- 1000
+
+# Loop to generate simulations
+for (i in 1:num_simulations) {
+    set.seed(123 + i)  # Change seed for each simulation
+
+    # Simulate binary outcomes for each group
+      control_outcomes_S1 <- rbinom(control_n, size = 1, prob = prob_control)
+      treatment_formal_outcomes_S1 <- rbinom(treatment_formal_n, size = 1, prob = prob_control)
+      treatment_casual_outcomes_S1 <- rbinom(treatment_casual_n, size = 1, prob = prob_control)
+
+    # Combine the outcomes into one vector
+    all_outcomes_S1 <- c(control_outcomes_S1, treatment_formal_outcomes_S1, treatment_casual_outcomes_S1)
+    
+    # Create vectors of group labels and responses
+    groups_S1 <- c(rep("Control", control_n), 
+                rep("Treatment - Formal", treatment_formal_n), 
+                rep("Treatment - Casual", treatment_casual_n))
+    responses_S1 <- ifelse(groups_S1 == "Control", "No", "Yes")
+    
+    # Create the data frame
+    simulated_data_S1 <- data.frame(Experiment = i, Group = groups_S1, Response = responses_S1, Outcome = all_outcomes_S1)
+
+    # Append the simulation to the DataFrame
+    simulation_S1 <- rbind(simulation_S1, simulated_data_S1)
+}
+
+# View the first few rows of the simulation results
+head(simulation_S1)
+dim(simulation_S1)
+
+# Subset for treatment group
+simulation_S1_treatment <- simulation_S1 %>% 
+  filter(! Group == "Control")
+dim(simulation_S1_treatment)
+
+
+#### Scenario 2 Expected Effect ####
+
+prob_control <- 0.50  # Probability of success for control group
+prob_treatment_formal <- 0.535  # Probability of success for treatment formal group
+prob_treatment_casual <- 0.605  # Probability of success for treatment casual group
+
+# Initialize an empty data frame to store all simulations
+simulation_S2 <- data.frame()
+
+# Loop to generate simulations
+for (i in 1:num_simulations) {
+    set.seed(123 + i)  # Change seed for each simulation
+
+    # Simulate binary outcomes for each group
+      control_outcomes_S2 <- rbinom(control_n, size = 1, prob = prob_control)
+      treatment_formal_outcomes_S2 <- rbinom(treatment_formal_n, size = 1, prob = prob_treatment_formal)
+      treatment_casual_outcomes_S2 <- rbinom(treatment_casual_n, size = 1, prob = prob_treatment_casual)
+
+    # Combine the outcomes into one vector
+    all_outcomes_S2 <- c(control_outcomes_S2, treatment_formal_outcomes_S2, treatment_casual_outcomes_S2)
+    
+    # Create vectors of group labels and responses
+    groups_S2 <- c(rep("Control", control_n), 
+                rep("Treatment - Formal", treatment_formal_n), 
+                rep("Treatment - Casual", treatment_casual_n))
+    responses_S2 <- ifelse(groups_S2 == "Control", "No", "Yes")
+    
+    # Create the data frame
+    simulated_data_S2 <- data.frame(Experiment = i, Group = groups_S2, Response = responses_S2, Outcome = all_outcomes_S2)
+
+    # Append the simulation to the DataFrame
+    simulation_S2 <- rbind(simulation_S2, simulated_data_S2)
+}
+
+# View the first few rows of the simulation results
+head(simulation_S2)
+dim(simulation_S2)
+
+# Subset simulated data for treatment group
+simulation_S2_treatment <- simulation_S2 %>% 
+  filter(! Group == "Control")
+dim(simulation_S2_treatment)
+
+#### code for repetition ####
+
+## RQ1 ##
+analyze_Q1 <- function(the.dat) {
+  the.test <- prop.test(
+    x = c(sum(the.dat$Outcome[the.dat$Response == "Yes"]), sum(the.dat$Outcome[the.dat$Response == "No"])),
+    n = c(sum(the.dat$Response == "Yes"), sum(the.dat$Response == "No")),
+    alternative = "greater")
+  
+  the.effect <- round(the.test$estimate[1],4) - round(the.test$estimate[2],4)
+  p <- round(the.test$p.value,6)
+  
+  result <- data.frame(effect = the.effect, p = p)
+  
+  return(result)
+}
+
+## RQ2 ##
+analyze_Q2 <- function(the.dat) {
+  the.test <- prop.test(
+    x = c(sum(the.dat$Outcome[the.dat$Group == "Treatment - Casual"]), sum(the.dat$Outcome[the.dat$Group == "Treatment - Formal"])),
+    n = c(sum(the.dat$Group == "Treatment - Casual"), sum(the.dat$Group == "Treatment - Formal")),
+    alternative = "greater")
+  
+  the.effect <- round(the.test$estimate[1],4) - round(the.test$estimate[2],4)
+  p <- round(the.test$p.value,6)
+  
+  result <- data.frame(effect = the.effect, p = p)
+  
+  return(result)
+}
+```
+
+
+### Research Question 1:
+
+#### Scenario 1:  No Effect
+
+**Zhiyi Guo 20%,	Zhiyuan Yu 20%,	Muskan Shokeen 20%, 	ShaoChien Wang 20%,	Claire Li 20%**: 
+
+##### Analysis
+
+```{r q1_scenario1_analysis}
+# Split the dataset by 'Experiment'
+split_data_S1_Q1 <- split(simulation_S1, simulation_S1$Experiment)
+# Apply the 'analyze_Q1' function to each subset
+results_list_S1_Q1 <- lapply(split_data_S1_Q1, analyze_Q1)
+# Combine all the results into a single data frame
+results_S1_Q1 <- do.call(rbind, results_list_S1_Q1)
+# Add the experiment number to the results data frame
+results_S1_Q1$Experiment <- rownames(results_S1_Q1)
+results_S1_Q1 <- results_S1_Q1[, c("Experiment", "effect", "p")]
+head(results_S1_Q1)
+
+# mean effect
+round(mean(results_S1_Q1$effect),4)*100
+
+# 95% CI of mean effect
+round(quantile(x = results_S1_Q1$effect, probs = c(0.05/2, 1-0.05/2)),4)*100
+
+# percentage of false positives (reject H0)
+(sum(results_S1_Q1$p < 0.05) / 1000)*100
+
+# percentage of true negative (do not reject H0)
+(sum(results_S1_Q1$p >= 0.05) / 1000)*100
+```
+
+
+#### Scenario 2:  An Expected Effect
+
+**Zhiyi Guo 20%,	Zhiyuan Yu 20%,	Muskan Shokeen 20%, 	ShaoChien Wang 20%,	Claire Li 20%**:  
+
+##### Analysis
+
+```{r q1_scenario2_analysis}
+# Split the dataset by 'Experiment'
+split_data_S2_Q1 <- split(simulation_S2, simulation_S2$Experiment)
+# Apply the 'analyze_Q1' function to each subset
+results_list_S2_Q1 <- lapply(split_data_S2_Q1, analyze_Q1)
+# Combine all the results into a single data frame
+results_S2_Q1 <- do.call(rbind, results_list_S2_Q1)
+# Add the experiment number to the results data frame
+results_S2_Q1$Experiment <- rownames(results_S2_Q1)
+results_S2_Q1 <- results_S2_Q1[, c("Experiment", "effect", "p")]
+head(results_S2_Q1)
+
+# mean effect
+round(mean(results_S2_Q1$effect),4)*100
+
+# 95% CI of mean effect
+round(quantile(x = results_S2_Q1$effect, probs = c(0.05/2, 1-0.05/2)),4)*100
+
+# percentage of false negative (not reject H0)
+(sum(results_S2_Q1$p >= 0.05) / 1000)*100
+
+# percentage of true positive (reject H0)
+(sum(results_S2_Q1$p < 0.05) / 1000)*100
+```
+
+
+### Research Question 2:
+
+#### Scenario 1:  No Effect
+
+**Zhiyi Guo 20%,	Zhiyuan Yu 20%,	Muskan Shokeen 20%, 	ShaoChien Wang 20%,	Claire Li 20%**: 
+
+##### Analysis
+
+```{r q2_scenario1_analysis}
+# Split the dataset by 'Experiment'
+split_data_S1_Q2 <- split(simulation_S1_treatment, simulation_S1_treatment$Experiment)
+# Apply the 'analyze_Q2' function to each subset
+results_list_S1_Q2 <- lapply(split_data_S1_Q2, analyze_Q2)
+# Combine all the results into a single data frame
+results_S1_Q2 <- do.call(rbind, results_list_S1_Q2)
+# Add the experiment number to the results data frame
+results_S1_Q2$Experiment <- rownames(results_S1_Q2)
+results_S1_Q2 <- results_S1_Q2[, c("Experiment", "effect", "p")]
+head(results_S1_Q2)
+
+# mean effect
+round(mean(results_S1_Q2$effect),4)*100 
+
+# 95% CI of mean effect
+round(quantile(x = results_S1_Q2$effect, probs = c(0.05/2, 1-0.05/2)),4)*100
+
+# percentage of false positives (reject H0)
+(sum(results_S1_Q2$p < 0.05) / 1000)*100
+
+# percentage of true negative (do not reject H0)
+(sum(results_S1_Q2$p >= 0.05) / 1000)*100
+```
+
+
+#### Scenario 2:  An Expected Effect
+
+**Zhiyi Guo 20%,	Zhiyuan Yu 20%,	Muskan Shokeen 20%, 	ShaoChien Wang 20%,	Claire Li 20%**: 
+
+##### Analysis
+
+```{r q2_scenario2_analysis}
+# Split the dataset by 'Experiment'
+split_data_S2_Q2 <- split(simulation_S2_treatment, simulation_S2_treatment$Experiment)
+# Apply the 'analyze_Q2' function to each subset
+results_list_S2_Q2 <- lapply(split_data_S2_Q2, analyze_Q2)
+# Combine all the results into a single data frame
+results_S2_Q2 <- do.call(rbind, results_list_S2_Q2)
+# Add the experiment number to the results data frame
+results_S2_Q2$Experiment <- rownames(results_S2_Q2)
+results_S2_Q2 <- results_S2_Q2[, c("Experiment", "effect", "p")]
+head(results_S2_Q2)
+
+# mean effect
+round(mean(results_S2_Q2$effect),4)*100
+
+# 95% CI of mean effect
+round(quantile(x = results_S2_Q2$effect, probs = c(0.05/2, 1-0.05/2)),4)*100
+
+# percentage of false negative (not reject H0)
+(sum(results_S2_Q2$p >= 0.05) / 1000)*100
+
+# percentage of true positive (reject H0)
+(sum(results_S2_Q2$p < 0.05) / 1000)*100
+```
+
+
+```{r}
+#### Table Summary ####
+library(knitr)
+library(kableExtra)
+
+# Create the data frame for table
+# Using check.names = FALSE to avoid automatic conversion of names
+table_data <- data.frame(
+  `Research Question` = rep(c("Question 1", "Question 2"), each = 2),
+  Scenario = c("No Effect", "Effect: 7%", "No Effect", "Effect: 7%"),
+  `Mean Effect in Simulated Data` = c("-0.07%", "6.91%", "0.02%", "7.02%"),
+  `95% Confidence Interval of Mean Effect` = c("(-3.81%, 3.73%)", "(2.78%, 11.11%)", "(-5.40%, 5.55%)", "(1.59%, 12.38%)"),
+  `Percentage of False Positives` = c("3.8%", NA, "3.9%", NA),
+  `Percentage of True Negatives` = c("96.2%", NA, "96.1%", NA),
+  `Percentage of False Negatives` = c(NA, "4.1%", NA, "20.5%"),
+  `Percentage of True Positives` = c(NA, "95.9%", NA, "79.5%"),
+  check.names = FALSE
+)
+
+# Create the table with kable and style it with kableExtra
+kable_styling(
+  kable(table_data, format = "html", col.names = c("Research Question", "Scenario", "Mean Effect in Simulated Data", "95% Confidence Interval of Mean Effect", "Percentage of False Positives", "Percentage of True Negatives", "Percentage of False Negatives", "Percentage of True Positives"), escape = FALSE) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "bordered"))
+)
+```
+
+#### Summary of Simulation
+
+<p style="text-align: justify;">
+The simulation results align with our assumptions. For scenario 1, which predicted no effect, the mean effect in simulated data is near zero. For both research questions, over 96% of experiments suggested that there's no statistically significant difference in customers' intentions to visit the coffee shop based on the owner's response strategies. For scenario 2, which anticipated an effect, the mean effect in simulated data matched the expected effect size. The experiment achieved a 95.9% power for research question 1 and 79.5% power for research question 2. The greater power for question 1 is attributed to its larger sample size of 1,260 compared to question 2's 630.
+</p>
+
+<p style="text-align: justify;">
+In conclusion, the simulation has provided insights into what survey data might reveal if our proposed experiment is carried out. With the recommended sample size, the experiment could yield a thorough understanding of the impact of coffee shop owners' response strategies and offer practical insights. This experiment can also be repeated multiple times across many different coffee shops to enrich the broader understanding of digital marketing tactics in an increasingly digital-centric consumer environment.
+</p>
+
+## References
+
+**Claire Li 100%**:
+
+<p style="text-align: justify;">
+[Beverley A. Sparks, Kevin Kam Fung So, Graham L. Bradley. (2016). Responding to negative online reviews: The effects of hotel responses on customer inferences of trust and concern. Tourism Management. Volume 53. Pages 74-85.](https://www-sciencedirect-com.ezproxy.cul.columbia.edu/science/article/pii/S0261517715300121?via%3Dihub)
+</p>
+
+<p style="text-align: justify;">
+[Beverley A. Sparks, Victoria Browning. (2011). The impact of online reviews on hotel booking intentions and perception of trust. Tourism Management. Volume 32, Issue 6, Pages 1310-1323.](https://www-sciencedirect-com.ezproxy.cul.columbia.edu/science/article/pii/S0261517711000033?via%3Dihub)
+</p>
+
+<p style="text-align: justify;">
+[Dens, N., De Pelsmacker, P., & Purnawirawan, N. (2015). ‘We(b)care’: How review set balance moderates the appropriate response strategy to negative online reviews. Journal of Service Management, 26(3), 486–515.](https://www.proquest.com/docview/2178631865?OpenUrlRefId=info:xri/sid:summon&accountid=10226)
+</p>
+
+<p style="text-align: justify;">
+[Dion, P. A., & Notarantonio, E. M. (1992). Salesperson Communication Style: The Neglected Dimension in Sales Performance. The Journal of Business Communication (1973), 29(1), 63-77.](https://doi-org.ezproxy.cul.columbia.edu/10.1177/002194369202900104)
+</p>
+
+<p style="text-align: justify;">
+[Gretzel, U., Fesenmaier, D., Lee, Y. S., & Tussyadiah, I. (2011). Narrating travel experiences: The role of new media In R. Sharpley & P. Stone (Eds.), Tourist experience: Contemporary perspectives (pp. 171–182).](https://www-taylorfrancis-com.ezproxy.cul.columbia.edu/chapters/edit/10.4324/9780203855942-22/narrating-travel-experiences-role-new-media-ulrike-gretzel-daniel-fesenmaier-yoon-jung-lee)
+</p>
+
+<p style="text-align: justify;">
+[Jintao Wu, Tong Wu, and Bodo B. Schlegelmilch. (2020). Seize the Day: How Online Retailers Should Respond to Positive Reviews. Volume 52, Issue 1, November 2020, Pages 52-60.](https://journals-sagepub-com.ezproxy.cul.columbia.edu/doi/epub/10.1016/j.intmar.2020.04.008)
+</p>
+
+<p style="text-align: justify;">
+[Lambert, N. M., Gwinn, A. M., Baumeister, R. F., Strachman, A., Washburn, I. J., Gable, S. L., & Fincham, F. D. (2013). A boost of positive affect: The perks of sharing positive experiences. Journal of Social and Personal Relationships, 30(1), 24-43.](https://journals-sagepub-com.ezproxy.cul.columbia.edu/doi/full/10.1177/0265407512449400?utm_source=summon&utm_medium=discovery-provider)
+</p>
+
+<p style="text-align: justify;">
+[Lu, X., Ba, S., Huang, L., & Feng, Y. (2013). Promotional Marketing or Word-of-Mouth? Evidence from Online Restaurant Reviews. Information Systems Research, 24(3), 596–612.](https://www-jstor-org.ezproxy.cul.columbia.edu/stable/42004284)
+</p>
+
+<p style="text-align: justify;">
+[Min, H., Lim, Y., & Magnini, V. P. (2015). Factors Affecting Customer Satisfaction in Responses to Negative Online Hotel Reviews: The Impact of Empathy, Paraphrasing, and Speed. Cornell Hospitality Quarterly, 56(2), 223-231.](https://journals.sagepub.com/doi/10.1177/1938965514560014)
+</p>
+
+<p style="text-align: justify;">
+[NASDAQ OMX's News Release Distribution Channel; New York. 29 Nov 2022.](http://ezproxy.cul.columbia.edu/login?url=https://www.proquest.com/wire-feeds/expanding-at-cagr-3-7-valuation-coffee-shops/docview/2740931048/se-2)
+</p>
+
+<p style="text-align: justify;">
+[Norton Robert, Communicator style: Theory, application, and measures. Beverly Hills: Sage, 1983. Pp. 320.](http://rd8hp6du2b.search.serialssolutions.com/?ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info%3Asid%2Fsummon.serialssolutions.com&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Norton+Robert%2C+Communicator+style%3A+Theory%2C+application%2C+and+measures.+Beverly+Hills%3A+Sage%2C+1983.+Pp.+320&rft.jtitle=Language+in+society&rft.au=Sanders%2C+Robert+E.&rft.date=1985-06-01&rft.issn=0047-4045&rft.eissn=1469-8013&rft.volume=14&rft.issue=2&rft.spage=249&rft.epage=252&rft_id=info:doi/10.1017%2FS0047404500011180&rft.externalDBID=n%2Fa&rft.externalDocID=10_1017_S0047404500011180)
+</p>
+
+<p style="text-align: justify;">
+[Tsz-Wai Lui, Marcin Bartosiak, Gabriele Piccoli, Vikram Sadhya. Online review response strategy and its effects on competitive performance. Tourism Management. Volume 67, 2018, Pages 180-190.](https://www.sciencedirect.com/science/article/abs/pii/S0261517718300207)
+</p>
+
+<p style="text-align: justify;">
+[Webster, C., & Sundaram, D. S. (2009). Effect of service provider's communication style on customer satisfaction in professional services setting: The moderating role of criticality and service nature. Journal of Services Marketing, 23(2/3), 103–114.](https://www.econbiz.de/Record/effect-service-provider-communication-style-customer-satisfaction-professional-services-setting-moderating-role-criticality-service-nature-webster/10008241550)
+</p>
+
+## Appendix
+
+**Muskan Shokeen 85%, Claire Li 15%**
+
+SURVEY
+
+**Q1** What is your age?
+
+      - Below 17
+
+      - 18-25
+
+      - 26-35
+
+      - 36-50
+
+      - Above 51
+
+      - Prefer not to say
+
+**Q2** What is your Gender?
+
+      - Male
+
+      - Female
+
+      - Non-binary
+
+      - Prefer not to say
+
+
+**Q3** What is your Occupation?
+
+      - Student
+
+      - Employed
+
+      - Self Employed
+
+      - Unemployed
+
+      - Retired
+
+      - Other
+
+**Q4** If you chose other in the previous question please specify: __________________________
+
+Below are some comments extracted from one online review website for a coffee shop in the area. Please go through each of these and answer the questions that follow
+
+**Version 1 (No Response - Participants in the Control group will see this version)**
+
+1. **Customer review:** "Absolutely love the cozy ambiance and friendly staff. The coffee is a delight!”
+
+2. **Customer review:** "The espresso here is a game-changer. Bold, rich, and a perfect pick-me-up!"
+
+3. **Customer review:** "The staff here is always so welcoming and remembers my usual order. Feels like a second home!"
+
+4. **Customer review:** "The iced coffee is my summer essential, and this place nails it every time!"
+
+5. **Customer review:** "Coffee heaven! The aroma alone is a mood lifter. Love starting my day here!"
+
+**Version 2 (Formal Response - Participants in the treatment - Formal response group will see this version)**
+
+1. **Customer review:** "Absolutely love the cozy ambiance and friendly staff. The coffee is a delight!”
+
+   **Owner Reply:** "Thank you for your kind words. We look forward to your return."
+
+2. **Customer review:** "The espresso here is a game-changer. Bold, rich, and a perfect pick-me-up!"
+
+   **Owner Reply:** "Your feedback is appreciated. Anticipating your next visit."
+
+3. **Customer review:** "The staff here is always so welcoming and remembers my usual order. Feels like a second home!"
+
+   **Owner Reply:** "We value your loyalty. Look forward to serving you again."
+
+4. **Customer review:** "The iced coffee is my summer essential, and this place nails it every time!"
+
+   **Owner Reply:** "Honored to be your choice. Your support is acknowledged."
+
+5. **Customer review:** "Coffee heaven! The aroma alone is a mood lifter. Love starting my day here!"
+
+   **Owner Reply:** "Appreciate your compliment. Delighted to be part of your routine."
+
+
+**Version 3 (Casual Response - Participants in the treatment - Casual response group will see this version)**
+
+1. **Customer review:** "Absolutely love the cozy ambiance and friendly staff. The coffee is a delight!”
+
+   **Owner Reply:** "Hey there! Thanks a latte for the love! So glad you dig our chill vibes and coffee. Can't wait to caffeinate you again!"
+
+2. **Customer review:** "The espresso here is a game-changer. Bold, rich, and a perfect pick-me-up!"
+
+   **Owner Reply:** "Game-changer, right? Thanks a brew-ton! Our espresso's all about that bold pick-me-up. See you soon for another shot of greatness!"
+
+3. **Customer review:** "The staff here is always so welcoming and remembers my usual order. Feels like a second home!"
+
+   **Owner Reply:** "Aww, you're family! So stoked to be your second home. We've got your usual ready anytime. Can't wait to welcome you back!"
+
+4. **Customer review:** "The iced coffee is my summer essential, and this place nails it every time!"
+
+   **Owner Reply:** "Summer vibes! Thanks a latte for making us your go-to for iced coffee. Nailing it every time is our jam. See you for more chill sips soon!"
+
+5. **Customer review:** "Coffee heaven! The aroma alone is a mood lifter. Love starting my day here!"
+
+   **Owner Reply:** "Aroma therapy, coffee style! Stoked you feel the vibes. Starting the day here is the best. Can't wait to kick start more mornings with you!"
+
+
+**Q5** Would you visit this coffee shop based on above information?
+
+      - Yes
+
+      - No
+
+Thanks for your time taking the survey. Have a nice day!
+
+
